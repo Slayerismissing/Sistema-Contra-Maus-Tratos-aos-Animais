@@ -31,39 +31,115 @@
             <label for="categoria">Categoria da Ocorrência *</label>
             <select name="categoria" id="categoria" required>
                 <option value="">Selecione...</option>
-                <option value="Agressão Física">Agressão Física</option>
-                <option value="Abandono">Abandono</option>
-                <option value="Negligência">Negligência (Sem água/comida/shelter)</option>
-                <option value="Confinamento Inadequado">Confinamento / Acorrentamento</option>
-                <option value="Condições Insalubres">Condições Insalubres</option>
-                <option value="Outros">Outros</option>
+                <option value="1">Agressão Física</option>
+                <option value="2">Abandono</option>
+                <option value="3">Negligência (Sem água/comida/shelter)</option>
+                <option value="4">Confinamento / Acorrentamento</option>
+                <option value="5">Condições Insalubres</option>
+                <option value="6">Rinhas/Exploração</option>
+                <option value="7">Outros</option>
             </select>
         </div>
 
         <div class="form-group">
             <label for="descricao">Descrição do Ocorrido *</label>
-            <textarea name="descricao" id="descricao" rows="5" placeholder="Descreva o que aconteceu em detalhes..." required></textarea>
+            <textarea
+                name="descricao"
+                id="descricao"
+                rows="5"
+                placeholder="Descreva o que aconteceu em detalhes..."
+                required
+            ></textarea>
         </div>
 
         <div class="form-group">
             <label for="data_hora">Data e Hora Aproximada</label>
-            <input type="datetime-local" name="data_hora" id="data_hora">
+            <input
+                type="datetime-local"
+                name="data_hora"
+                id="data_hora"
+            >
         </div>
 
-        <div class="form-group">
-            <label for="localizacao">Endereço / Ponto de Referência *</label>
-            <input type="text" name="localizacao" id="localizacao" placeholder="Rua, número próximo, referência..." required>
-        </div>
+       
+            <div class="form-group">
+                <label for="cep">CEP *</label>
+                <input
+                    type="text"
+                    name="cep"
+                    id="cep"
+                    placeholder="00000-000"
+                    required
+                >
+            </div>
 
-        <div class="form-group">
-            <label for="municipio_uf">Município / UF *</label>
-            <input type="text" name="municipio_uf" id="municipio_uf" placeholder="Ex: Maceió / AL" required>
-        </div>
+            <div class="form-group">
+                <label for="logradouro">Logradouro *</label>
+                <input
+                    type="text"
+                    name="logradouro"
+                    id="logradouro"
+                    placeholder="Rua, avenida..."
+                    required
+                >
+            </div>
 
-        <div class="form-group">
-            <label for="anexos">Anexar Imagens (Opcional - Máx 10MB cada)</label>
-            <input type="file" name="anexos" id="anexos" accept="image/png, image/jpeg" multiple>
-        </div>
+            <div class="form-group">
+                <label for="numero">Número</label>
+                <input
+                    type="text"
+                    name="numero"
+                    id="numero"
+                    placeholder="Número ou S/N"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="bairro">Bairro *</label>
+                <input
+                    type="text"
+                    name="bairro"
+                    id="bairro"
+                    placeholder="Nome do bairro"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="municipio">Município *</label>
+                <input
+                    type="text"
+                    name="municipio"
+                    id="municipio"
+                    placeholder="Ex: Maceió"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="estado">Estado *</label>
+                <select name="estado" id="estado" required>
+                    <option value="">Selecione o estado</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="BA">Bahia</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="complemento">Complemento</label>
+                <input
+                    type="text"
+                    name="complemento"
+                    id="complemento"
+                    placeholder="Apartamento, referência..."
+                >
+            </div>
+
 
         <button type="submit" class="btn btn-primary">Enviar Denúncia</button>
     </form>

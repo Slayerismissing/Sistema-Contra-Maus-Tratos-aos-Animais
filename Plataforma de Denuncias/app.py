@@ -38,6 +38,7 @@ from models import (
 
 load_dotenv()
 
+DENUNCIAS_BD = {}
 
 app = Flask(__name__)
 
